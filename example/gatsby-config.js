@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Document by Code Bushi`,
-    name: `Code Bushi`,
+    title: `JS Examples Docs`,
+    name: `Carlos Villalobos`,
     siteUrl: `https://codebushi.com`,
-    description: `This is my description that will be used in the meta tags and important for search results`,
+    description: `Learning JavaScript`,
     social: [
       {
         name: `github`,
