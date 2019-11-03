@@ -1,17 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: `Document by Code Bushi`,
-    name: `Code Bushi`,
+    title: `JS Examples Documentation`,
+    name: `gatsby-theme-document`,
     siteUrl: `https://codebushi.com`,
-    description: `This is my description that will be used in the meta tags and important for search results`,
+    description: `My documentation of JS studies.`,
     social: [
       {
         name: `github`,
-        url: `https://github.com/codebushi`
+        url: `https://github.com/charlievillacr`
       },
       {
         name: `twitter`,
-        url: `https://twitter.com/HuntaroSan`
+        url: `https://carlosvillalobos.design`
       }
     ],
     sidebarConfig: {
