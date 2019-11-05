@@ -1,0 +1,153 @@
+---
+title: '4. JavaScript Statements'
+description: 'Programming instructions are called statements.'
+---
+
+```js
+var x, y, x;
+x = 5;
+y = 6;
+z = x + y;
+```
+
+## JavaScript Programs
+
+A **computer program** is a list of "instructions" to be "executed" by a computer.
+
+In a programming language, these programming instructions are called **statements**.
+
+A **JavaScript program** is a list programming **statements**.
+
+In HTML, JavaScript programs are executed by the web browser.
+
+## JavaScript Statements
+
+JavaScript statements are composed of:
+
+- Values
+- Operators
+- Expressions
+- Keywords
+- & Comments. 
+
+This statements tells the browser to write "Hello Dolly." inside an HTML element with id="demo":
+
+```js
+document.getElementById("demo".innerHTML)
+```
+
+Most JavaScript programs contain many JavaScript statements.
+
+The statements are executed, one by one, in the same order as they are written.
+
+JavaScript programs (and JavaScript statements) are often called JavaScript code.
+
+## Semicolons
+
+Semicolons separate JavaScript statements.
+
+Add a semicolon at the end of each executable statement:
+
+```js
+var a, b, c;    // Declare 3 variables
+a = 5;          // Assign the value 5 to a 
+b = 6;          // Assign the value 6 to b
+c = a + b;      // Assign the sum of a and b to c
+```
+
+When separated by semicolons, multiple statements on one line are allowed:
+
+```js
+a = 5: b = 6; c = a + b;
+```
+
+On the web, you might see examples without semicolons.
+
+Ending statements with *semicolon* is not required, but **highly recommended.**
+
+## JavaScript White Space
+
+JavaScript ignores multiple spaces. You can add white space to you script to make it more readable:
+
+```js
+var person = "Hege";
+var person="Hege";
+```
+
+A good practice is to put spaces around operators ( = + - * /)
+
+```js
+var x = y + z;
+
+```
+
+## JavaScript Line Lenght and Line Break
+
+For best readability.programmers often like to avoid code lines linger than 80 characters.
+
+If a JavaScript statment does not fit on one line, the best place to break it is after an operator:
+
+```js
+document.getElementById("demo").innerHTML+"Hello Dolly!";
+```
+
+## JavaScript Code Blocks
+
+JavaScript statements can be grouped together in code blocks, inside curly brackets `{...}`
+
+The purpose of code blocks is to define statements to be executed together.
+
+One place you will find statements gruped together in blocks, in JavaScript functions:
+
+```js
+function myFunction()
+    document.getElementById("demo1").innerHTML="Hello Dolly!";
+    document.getElementById("demo2").innerHTML="How are you?";
+```
+
+In this tutorial we use 2 spaces of indentation for code blocks. You will learn more about function later in this tutorial.
+
+## JavaScript Keywords
+
+JavaScript statements often start with a keyword to identify the JavaScript action to be performed.
+
+Visit our Reserved Words reference to view a full list of [JavaScript keywords](https://www.w3schools.com/js/js_reserved.asp)
+
+### Keyword > Description
+
+`break`         Terminates a switch or a loop
+
+`continue`      Jumps out of a loop and starts ath the top
+
+`debugger`      Stops the execution of JavaScript, and calls (if available) the debugging function
+
+`do...while`    Executes a block of statements, and repeats the block, while condition is `true`.
+
+`for`           Marks a block of statements to be xecuted, as long as condition is `true`.
+
+`function`      Declares a function
+
+`if...else`     Marks a block of statements to be executed, depending on a condition
+
+`return`        Exits a function
+
+`switch`        Marks a block of statements to be executed, depending on different cases
+
+`try catch`     Implements error handling to ablock of statements
+
+`var`           Declares a variable
+
+
+JavaScript keywords are reserved words. Reserved words cannot de used as names for variables.
+
+
+
+### ECMAScript 5 - JavaScript 5
+
+[ECMAScript 5 w3Schools](https://www.w3schools.com/js/js_es5.asp)
+
+### ECMAScript 6 - ECMAScript 2015
+
+[ECMAScript 6 w3schools](https://www.w3schools.com/js/js_es6.asp)
+
+
