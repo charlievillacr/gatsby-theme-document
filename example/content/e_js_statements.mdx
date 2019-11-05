@@ -1,6 +1,6 @@
 ---
-title: '4. JavaScript Statements'
-description: 'Programming instructions are called statements.'
+title: 'E. JS Statements'
+description: ''
 ---
 
 ```js
@@ -8,6 +8,27 @@ var x, y, x;
 x = 5;
 y = 6;
 z = x + y;
+```
+
+Example
+
+```js
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Numbers</h2>
+
+<p>Number can be written with or without decimals.</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 10.50;
+</script>
+
+</body>
+</html>
 ```
 
 ## JavaScript Programs
@@ -33,8 +54,31 @@ JavaScript statements are composed of:
 This statements tells the browser to write "Hello Dolly." inside an HTML element with id="demo":
 
 ```js
-document.getElementById("demo".innerHTML)
+document.getElementById("demo").innerHTML
 ```
+Example
+
+```js
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Statements</h2>
+
+<p>In HTML, JavaScript statements are executed by the browser.</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "Hello Dolly.";
+</script>
+
+</body>
+</html>
+```
+
+
 
 Most JavaScript programs contain many JavaScript statements.
 
@@ -55,10 +99,59 @@ b = 6;          // Assign the value 6 to b
 c = a + b;      // Assign the sum of a and b to c
 ```
 
+Example:
+
+```js
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Statements</h2>
+
+<p>JavaScript statements are separated by semicolons.</p>
+
+<p id="demo1"></p>
+
+<script>
+var a, b, c;
+a = 5;
+b = 6;
+c = a + b;
+document.getElementById("demo1").innerHTML = c;
+</script>
+
+</body>
+</html>
+```
+
+
 When separated by semicolons, multiple statements on one line are allowed:
 
 ```js
 a = 5: b = 6; c = a + b;
+```
+
+Example:
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Statements</h2>
+
+<p>Multiple statements on one line is allowed.</p>
+
+<p id="demo1"></p>
+
+<script>
+var a, b, c;
+a = 5; b = 6; c = a + b;
+document.getElementById("demo1").innerHTML = c;
+</script>
+
+</body>
+</html>
 ```
 
 On the web, you might see examples without semicolons.
@@ -81,14 +174,40 @@ var x = y + z;
 
 ```
 
-## JavaScript Line Lenght and Line Break
+## JavaScript Line Length and Line Break
 
-For best readability.programmers often like to avoid code lines linger than 80 characters.
+For bestter readability, programmers often like to avoid code lines linger than 80 characters.
 
 If a JavaScript statment does not fit on one line, the best place to break it is after an operator:
 
 ```js
 document.getElementById("demo").innerHTML+"Hello Dolly!";
+```
+
+Example:
+
+```js
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Statements</h2>
+
+<p>
+The best place to break a code line is after an operator or a comma.
+</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML =
+"Hello Dolly!";
+</script>
+
+</body>
+</html>
+
 ```
 
 ## JavaScript Code Blocks
@@ -107,6 +226,34 @@ function myFunction()
 
 In this tutorial we use 2 spaces of indentation for code blocks. You will learn more about function later in this tutorial.
 
+Example:
+
+```js
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Statements</h2>
+
+<p>JavaScript code blocks are written between { and }</p>
+
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo1").innerHTML = "Hello Dolly!";
+  document.getElementById("demo2").innerHTML = "How are you?";
+}
+</script>
+
+</body>
+</html>
+
+```
+
 ## JavaScript Keywords
 
 JavaScript statements often start with a keyword to identify the JavaScript action to be performed.
@@ -117,7 +264,7 @@ Visit our Reserved Words reference to view a full list of [JavaScript keywords](
 
 `break`         Terminates a switch or a loop
 
-`continue`      Jumps out of a loop and starts ath the top
+`continue`      Jumps out of a loop and starts at the top
 
 `debugger`      Stops the execution of JavaScript, and calls (if available) the debugging function
 
