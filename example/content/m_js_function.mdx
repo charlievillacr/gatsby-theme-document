@@ -1,0 +1,152 @@
+---
+title: 'JS Functions'
+description: 'A block of code designed to perform a particular task'
+---
+
+## JS Function
+
+A JS function is a block of code designed to perform a particular task.
+
+A JavaScript function is executed when "something" invokes it (calls it).
+
+```js
+function myFunction(p1, p2) {
+    return p1 * p2; // The function returns the product of p1 and p2
+}
+```
+
+## JS Function Syntax
+
+A JS function is defined with `function` keyword, followed by a **name**, followed by parentheses **()**.
+
+Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+
+The parentheses may include parameter names separated by commas:
+**(parameter1, parameter2, ...)**.
+
+The code to be executed, by the function, is placed inside curly brackets: **{}**.
+
+```js
+function name(parameter1, parameter2, parameter3) {
+    //code to be executed
+}
+```
+
+Function **parameters** are listed inside parentheses () in the function definition.
+
+Function **arguments** are the **values** received by the function when it is invoked.
+
+Inside the function, the argument (the paremeters) behave as local variables.
+
+A function is much as Procedure or a Subroutine, in other programming languages.
+
+## Function Invocation
+
+The code inside the function will execute when "something" **invokes** (calls) the function:
+
+- When an event occurs (when a user cliks a button)
+- When it is invoked (called) from JavaSCript code
+- Automatically (self invoked)
+
+## Function Return
+
+When JavaScript reaches a `return` statement, the function will stop executing.
+
+If the function was invoked from a staement, JavaScript will "return" to execute the code after the invoking statement.
+
+Function often compute a **return value**. The return value is "returned" back to he "caller":
+
+### Calculate the product of two numbers, and return the result:
+
+```js
+var x = myFunction(4, 3);   // Function is called, return value will end up in x
+
+function myFunction(a, b) {
+    return a * b;            // Function returns the product of a and b 
+}
+```
+
+The result in x will be:
+
+```js
+12
+```
+
+```html
+<!DOCTYPE html>
+<body>
+<h2>JS Functions</h2>
+
+<p>This example calls a function which performs a calculation and returns the result:</p>
+
+<p id="demo"></p>
+
+<script>
+    var x = myFunction(4, 3);
+    document.getElementById("demo").innerHTML = x;
+
+    function myFunction(a, b) {
+        return a * b;
+    } 
+</script>
+</body>
+</html>
+```
+Result:
+
+```
+JavaScript Functions
+
+This example calls a function which performs a calculation and returns the result:
+
+12
+```
+
+## Why Functions?
+
+**You can reuse code**: Define the code once, and use it many times.
+
+You can use the same code many times with different arguments, to produce different results.
+
+Example
+
+Convert Farenheit to Celsius:
+
+```js
+function toCelcius(farenheit) {
+    return (5/9) * (farenheit-32);
+}
+document.getElementById("demo").innerHTML = toCelsius(77);
+```
+
+```js
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Functions</h2>
+
+<p>This example calls a function to convert from Fahrenheit to Celsius:</p>
+<p id="demo"></p>
+
+<script>
+function toCelsius(f) {
+  return (5/9) * (f-32);
+}
+document.getElementById("demo").innerHTML = toCelsius(77);
+</script>
+
+</body>
+</html>
+```
+
+Result:
+
+```md
+JavaScript Functions
+
+This example calls a function to convert from Fahrenheit to Celsius:
+
+25
+```
+
