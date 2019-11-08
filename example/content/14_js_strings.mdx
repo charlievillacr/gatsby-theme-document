@@ -1,0 +1,373 @@
+---
+title: 'JS Strings'
+description: 'Used for storing and manipulating text.'
+---
+
+## JavaScript strings
+
+Used for storing and manipulating text.
+
+A string is zero or more characters written inside quotes.
+
+```js
+var x = "John Doe";
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Strings</h2>
+
+<p id="demo"></p>
+
+<script>
+var x = "John Doe";  // String written inside quotes
+document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html>
+```
+
+You can use single or double quotes:
+
+```js
+var carName1 = "Volvo XC60";    // Double quotes
+var carName2 = 'Volvo XC60';    // Single quotes
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Strings</h2>
+
+<p>Strings are written inside quotes. You can use single or double quotes:</p>
+
+<p id="demo"></p>
+
+<script>
+
+var carName1 = "Volvo XC60"; // Double quotes
+var carName2 = 'Volvo XC60'; // Single quotes
+
+document.getElementById("demo").innerHTML =
+carName1 + " " + carName2; 
+
+</script>
+
+</body>
+</html>
+```
+
+### Result
+
+JavaScript Strings
+
+Strings are written inside quotes. You can use single or double quotes:
+
+Volvo XC60 Volvo XC60
+
+
+You can use quotes inside a string, as long as they don't match the quotes surrounding the string:
+
+```js
+var answer1 = "It's alright";
+var answer2 = "He is called 'Johnny'";
+var answer3 = 'He is called "Johnny"';
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Strings</h2>
+
+<p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string.</p>
+
+<p id="demo"></p>
+
+<script>
+var answer1 = "It's alright";
+var answer2 = "He is called 'Johnny'";
+var answer3 = 'He is called "Johnny"'; 
+
+document.getElementById("demo").innerHTML =
+answer1 + "<br>" + answer2 + "<br>" + answer3; 
+</script>
+
+</body>
+</html>
+```
+
+## String Length
+
+To find the length of a string, use the built-in `length` property:
+
+```js
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var sln = txt.length;
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JS String Properties</h2>
+
+<p>The lenght property returns the length of a string:</p>
+
+<p id="demo"></p>
+
+<script>
+var txt = "ABCDFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("demo").innerHTML=txt.length;
+</script>
+
+</body>
+</html>
+```
+
+## Escape Character
+
+Because strings must be written within quotes, JavaScript will misunderstan this string:
+
+```js
+var x = "We are the so-called "Vikings" from the north.";
+```
+
+The string will be chopped to "We are the so-called".
+
+The solution to avoid this problem, is to used the **backslash scape character**.
+
+The backslash (`\`) escape character turns special characters intro string characters:
+
+| **Code**      | **Result**    | **Description**       |
+|:-------------:|:-------------:|:---------------------:|
+| `\'`          | `'`           | Single quote          |
+| `\"`          | `\\`          | Double quote          |
+| `\\`          | `\`           | Backslash             |
+
+The sequence `\"` insets a double quote in a string:
+
+```js
+var x = "We are the so-called \"Vikings\" from the north.";
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Strings</h2>
+
+<p>The escape sequence \" inserts a double quote in a string.</p>
+
+<p id="demo"></p>
+
+<script>
+var x = "We are the so-called \"Vikings\" from the north.";
+document.getElementById("demo").innerHTML = x; 
+</script>
+
+</body>
+</html>
+```
+
+### Result:
+
+JavaScript Strings
+
+The escape sequence \" inserts a double quote in a string.
+
+We are the so-called "Vikings" from the north.
+
+The sequence `\'` inserts a single quote in a string:
+
+```js
+var x = 'It\'s alright.';
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Strings</h2>
+
+<p>The escape sequence \' inserts a single quote in a string.</p>
+
+<p id="demo"></p>
+
+<script>
+var x = 'It\'s alright.';
+document.getElementById("demo").innerHTML = x; 
+</script>
+
+</body>
+</html>
+```
+
+```js
+var x = "The character \\ is called backslash.";
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Strings</h2>
+
+<p>The escape sequence \\ inserts a backslash in a string.</p>
+
+<p id="demo"></p>
+
+<script>
+var x = "The character \\ is called backslash.";
+document.getElementById("demo").innerHTML = x; 
+</script>
+
+</body>
+</html>
+```
+
+### Result
+
+JavaScript Strings
+
+The escape sequence `\\` inserts a backslash in a string.
+
+The character \ is called backslash.
+
+
+Six other escape sequences are valied in JavaScript:
+
+| **Code**      | **Result**            |
+|:-------------:|:---------------------:|
+| `\b`          | Backspace             |   
+| `\f`          | Form Feed             |
+| `\n`          | New Line              |
+| `\r`          | Carriage return       |
+| `\t`          | Horizontal tabulator  |
+| `\v`          | Vertical Tabulator    |
+
+The 6 escape characters above were originally designed to control typewriters, teletypes, and fax machines. They do not make any sense in HTML.
+
+## Breaking Long Code Lines
+
+For best readability, programmers often like to avoid code lines longer than 80 characters.
+
+If a JavaScript statement does not fit on one line, the best place to break it is after an operator:
+
+```js
+document.getElementById("demo").innerHTML =
+"Hello Dolly!";
+```
+
+A safer way to break up a string, is to use string addition:
+
+```js
+
+document.getElementById("demo").innerHTML = "Hello " + "Dolly!";
+```
+
+You cannot break up a code line with a backslash:
+
+```js
+document.getElementById("demo").innerHTML = \
+"Hello Dolly!";
+```
+
+## Strings can be Objects
+
+Normally, JavaScript strings are primitive values, created from literals:
+
+`var firstName = "John";`
+
+But strings can also be defined as objects with the keyword `new`:
+
+`var firstName = new String("John");`
+
+```js
+var x = "John";
+// > typeof x 'string'
+var y = new String("John");
+// > typeof y 'object'
+```
+
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+<p id="demo"></p>
+
+<script>
+var x = "John";        // x is a string
+var y = new String("John");  // y is an object
+
+document.getElementById("demo").innerHTML =
+typeof x + "<br>" + typeof y;
+</script>
+
+</body>
+</html>
+```
+
+Don't create strings as objects. It slows down execution speed.
+
+The `new` keyword complicates the code. THi can produce some unexpected results:
+
+```js
+var x = "John";             
+var y = new String("John");
+// (x == y) is true because x and y have equal values 
+```
+
+When using the `===` operator, equal strings are not equal, because th `===` operator expects in both type and value.
+
+```js
+var x = "John";
+var y = new String("John");
+// (x === y) is false because x and y have different types (string and object)
+```
+
+Or even worse. Objects cannot be compared:
+
+```js
+var x = new String("John");
+var y = new String("John");
+// (x == y) is false because x and y are different objects
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Never Create Strings as objects.</h2>
+
+<p>JS objects cannot be compared.</p>
+
+<p id="demo"></p>
+
+<script>
+
+var x = new String("John");
+var y = new String("John");
+document.getElementById("demo").innerHTML=(x==y);
+</script>
+
+</body>
+</html>
+```
+
+Note the difference between `(x==y)` and `(x===y)`.
+Comparing two JavaScript objects will always return `false`.
+
