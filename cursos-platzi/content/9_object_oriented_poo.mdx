@@ -1,0 +1,618 @@
+---
+title: 'Programación Orientada a Objetos'
+description: 'Programación Orientada a Objetos'
+---
+
+## Programación Orientada a Objetos (POO)
+
+- Simplifica la programación.
+- Viene de la metodología: "Orientación a objetos"
+- Surge a partir de los problemas que tenemos y necesitamos plasmar en código.
+
+- Clase Num.4 URL
+
+[Paradigma Orientado a Objetos](https://platzi.com/clases/1474-oop/16670-paradigma-orientado-a-objetos/)
+
+- Paradigma
+
+- Teoría que suministra la base y modelo para resolver problemas.
+
+ Compuesto de 4 Elementos
+
+1. Clases
+2. Propiedades
+3. Métodos
+4. Objetos
+
+- 4 Pilares
+
+1. Encapsulamiento
+2. Abstracción
+3. Herencia
+4. Polimorfismo
+
+- Lenguajes orientados a objetos
+
+1. JavaScript
+2. Python
+3. Java
+4. PHP
+
+5. C++
+6. C#
+7. Ruby
+8. Perl
+9. Kotlin
+
+- Java
+
+``` Orientado a Objetos natiralmente
+- Android
+- Server Side
+<!-- Buscar cursos de programación funcional -->
+- Extensión: .java
+```
+
+- PHP
+
+- Lenguaje interpretado
+- Pensado para la web.
+
+- PYTHON
+
+- Diseñado para ser fácil de usar
+- Múltiples usos: Web, Server Side, Análisis de Datos, Machine Learning.
+- Extensión: .py
+
+- JavaScript
+
+- Lenguaje interpretado
+- Orientado a objetos
+
+- Diagramas de Modelado / Object Modeling Techniques (OMT)
+
+- OMT since 1991 (Deprecated)
+- Metología para el analisís orientado a objetos.
+
+- Unified modeling Language (UML)
+
+- Es un lenguaje estandar de modelos de sistemas orientados a objetos
+
+- Plasmar nuestro analisis en un grafico.
+- UML: Unified Modeling Languaje (Lenguaje de Modelado Unificado).
+
+1. Clases
+2. Casos de Uso
+3. Objetos
+4. Actividades
+5. Iteracion
+6. Estados
+7. Implementación
+
+<!-- Investigar más sobre Ingeniería de Software -->
+
+- Ejemplo de Entregable Modelo UML del Proyecto
+
+- Una manera gráfica de represenra una situación
+<!-- UML is King -->
+
+- Las clases
+
+- Se representan así
+|------------------------------------|
+|               Clase                |
+|------------------------------------|
+| + attribute1:type = defaultValue   |
+| + attribute2:type                  |
+| - attribute3:type                  |
+|------------------------------------|
+| + operantion1(params):returnType   |
+| - operation2(params)               |
+| - operation3()                     |
+|------------------------------------|
+
+- En la parte superior de colocan los atributos o propiedades, y debajo las operaciones de la clase. Notarás que el primer caractér con el que empiezan es sun íbolo. Este denotará la visibilidad del atributo o método, esto es un termino que tiene que ver Encapsulamiento y veremos más adelante a detalle.
+
+- Estos son los niveles de visibilidad que puedes tener
+
+<!-- 
+- private
++ public
+# protected
+~ default
+ -->
+
+- Una forma de representa las relaciones que tendrá un elemento con otro es a través de la flechas en UML, y aquí tenemos varios tipos, estos son los más comúnes:
+
+- Asociación
+
+====>
+
+- MODULARIDAD
+
+- La modularidad va muy relacionada con las clases y es un principio de la Programación Orientado a Objetos y va de la mano con el Diseño Modular que significa dividir un sistema en partes pequeñas y estas serán nuestros módulos pudiendo funcionar de manera independiente.
+
+- La modularidad de nuestro código nos va a permitir
+
+- Reutilizar código
+- Evitar colapsos
+- Hacer nuestro código más mantenible
+- Legibilidad
+- Resolución rápida de problemas
+- Una buena práctica es separando las clases en archivos diferentes.
+
+<!-- DIVIDE & VENCERÁS -->
+
+- CLASE
+
+- Modularidad
+- Divide el programa en diferentes partes o módulo/ clases.
+- Separar las clases en archivos.
+
+<!-- Próxima Clase - Diagramas UML -->
+
+- OBJETOS
+
+- Los Objetos son aquellos que tienen propiedades y comportamientos, también serán sustantivos.
+
+<!-- Siempre tienen: Propiedades y comportamientos -->
+
+<!-- Identificar los objetos -->
+
+- Pueden ser Físicos o Conceptuales
+
+- Las Propiedades también pueden llamarse atributos y estos también serán sustantivos. Algunos atributos o propiedades son nombre, tamaño, forma, estado, etc. Son todas las características del objeto.
+
+- Objeto fisico: manzana
+
+- Los Comportamientos serán todas las operaciones que el objeto puede hacer, suelen ser verbos o sustantivos y verbo. Algunos ejemplos pueden ser que el usuario pueda hacer login y logout.
+
+- Objeto conceptual = Simbologías
+
+- ¿Estos pueden tener atributos y comportamientos?
+
+- Objeto conceptual = Sesión de usuario
+
+- Hizo log in, log out, identficador de la sesión, etc.
+
+- User = Objeto físico
+
+- Session = Objeto conceptual
+
+- Objeto conceptual = cuenta de un banco
+
+- Objeto físico = tarjeta de débito.
+
+- Propiedades = Atributos
+
+- Propiedades también pueden llamarse atributos serán sustantivos.
+
+- Por ejemplo:
+
+1. Nombre
+2. Tamaño
+3. Forma
+4. Estado
+
+<!-- Atributos -->
+
+- Comportamientos
+
+- Serán todas la operaciones del objeto, suelen ser verbos o sustantivo y verbo.
+
+1. login()
+2. logout()
+3. makeReport()
+
+- Perro
+
+<!-- Propiedades -->
+- nombre
+- color
+- raza
+- altura
+
+<!-- Comportamientos -->
+- ladrar
+- comer
+- dormir
+- correr
+
+- Adopciones
+<!-- Propiedades -->
+- id
+- nombre
+- color
+- raza
+- altura
+
+## Comportamientos
+
+1. serAdoptado()
+
+- Abstracción y Clases
+
+- Clase
+
+- Es el MODELO sobre el cual se construirá nuestro objeto.
+
+- La clase es la PLANTILLA, que nos permitirá crear más objetos(instanciar, más adelante)
+
+- ABSTRACCIÓN
+<!-- Analizar Objetos para crear Clases -->
+- La abstracción es extraer las propiedades y comportamientos que tienen en común varios objetos (o uno solo) para crear la plantilla, el molde, la clase.
+
+<!-- Curso Programación Orientada a Objetos -->
+
+- EJEMPLO: Uber
+
+<!-- Clase 11 - Analizando Uber -->
+
+- Necesidad: Traslado desde punto A hasta punto B.
+
+1. Solicitud del auto
+2. Elijo destino a => b
+3. Tipos de autos => Conductor
+    a. UberX
+    b. UberPool
+    c. UberBlack
+    d. UberVan
+4. Conductor => Auto => Viaje => Costo $ del Viaje
+
+- Objetos:
+
+1. User:
+    1. id
+    2. name
+    3. document
+    4. email
+    5. password
+
+2. Route:
+    1. start: [2] // latitude & longitud
+    2. end: [2]  // latitude & longitud
+
+3. Cars:
+    1. Uberx: {
+        id,
+        license,
+        driver,
+        passengers,
+        brand,
+        model,
+    }
+    2. Uberpool: {
+        id,
+        license,
+        driver,
+        passengers,
+        brand,
+        model,
+    }
+    3. Uberblack: {
+        id,
+        license,
+        driver,
+        passengers,
+        typeOfCarAccepted[],
+        seatsMaterial[],
+    }
+    4. Ubervan: {
+        id,
+        license,
+        driver
+        passengers,
+        typeOfCarAccepted[],
+        seatsMaterial[],
+    }
+
+4. Driver:
+    1. id
+    2. name
+    3. document
+    4. email
+    5. password
+
+5. Amount:
+    1. card: {
+        id,
+        number,
+        cvv,
+        date
+    }
+    2. paypal: {
+        id,
+        email
+    }
+    3. cash: {
+        id,
+    }
+
+6. Trip: {
+    user,
+    destination,
+    type of car,
+    payment Option,
+}
+
+- RETO 1: identificando objetos
+
+- Toma como referencia nuestro Sistema de Adopciones e identifica todos los objetos.
+
+1. Perros: Nombre,
+
+2. Dueños: Nombre,
+
+- UML
+
+<!--
+|------------------------------------|
+|         Nombre de Clase            |    IDENTIDAD
+|------------------------------------|
+| + Atributo1:                       |
+|   Atributo2:                       |    ESTADO
+|   Atributo3:                       |
+|------------------------------------|
+| + Operación1:                      |
+|   Operación2:                      |    COMPORTAMIENTO
+|   Operación3:                      |
+|------------------------------------|
+ -->
+
+- EJEMPLO
+
+<!--
+|--------------------------|
+|          Person          |    IDENTIDAD
+|--------------------------|
+| + name:                  |    ESTADO
+|--------------------------|
+| + walk()                 |    COMPORTAMIENTO
+|--------------------------|
+ -->
+
+- Funciones
+
+- Java
+    class Person{}
+
+- Python
+
+    class Person:
+
+- JavaScript
+
+    functionPerson() {}
+
+- PHP
+
+    classPerson{}
+
+<!-- Funciones para definir Clases -->
+
+- Java
+
+    class Person{
+    String name= "";
+    void walk() {}
+}
+
+- Python
+
+    class Person:
+        name = "";
+        def walk();
+
+<!-- Anidación dentro del método -->
+
+- JavaScript
+
+Person.prototype.walk = function() {
+    }
+
+- PHP
+
+<!-- Dínamicamente tipeado -->
+classPerson{
+    $name = "";
+    function walk() {}
+}
+
+<!-- Definir bloques de código, poner $ -->
+
+- DRY: Don't repeat yourself
+
+- Promueve la reducción de duplicación en programación.
+
+- Toda pieza de información nunca debería ser duplicada debido a que la duplicación incrementa la dificultad en los cambios y evolución.
+
+<!-- Vamos a reutilizar código -->
+
+- HERENCIA
+
+- Crearemos nuevas clases a partir de otras.
+
+- Se establece una relación padre e hijo.
+
+1. Súperclase igual a Padre
+
+2. Subclase igual a Hijo
+
+<!-- Clase 14 -->
+
+[Aplicando Herencia](https://platzi.com/clases/1474-oop/16682-aplicando-herencia-a-nuestro-proyecto-uber/)
+
+<!--  
+|--------------------------|
+|          User            |    IDENTIDAD
+|--------------------------|
+| + id:                    |    ESTADO
+| + name:                  |
+| + document:              |
+| + email:                 |
+| + password:              |
+|--------------------------|
+| +                        |    COMPORTAMIENTO
+|--------------------------|
+
+|--------------------------|
+|         Driver           |
+|--------------------------|
+| + id:                    |
+| + name:                  |
+| + document:              |
+| + email:                 |
+| + password:              |
+|--------------------------|
+| +                        |
+|--------------------------|
+-->
+
+- Definiendo Clases Java
+
+- Definiendo Clases Python
+
+- Definiendo Clases en JavaScript
+
+- Curso de Programación Orientada a Objetos POO
+
+- por anncode
+
+- Si estás interesado en aprender JavaScript desde ahora debes saber que el concepto de clases no existía como tal hasta el nuevo estándar EcmaScript 6
+
+- El reto de encontrar sistemas construidos con este estándar es alto por esa razón te explicaré cuál fue por mucho tiempo su equivalente
+
+- Los Prototipos fue la forma de crear clases en JavaScript y las representaremos partiendo de la declaración de una función
+
+- Creemos nuestras clases
+
+- Account
+- Car
+- Payment
+- Route
+
+- Para esto crearemos el siguiente sistema de archivos dentro de la carpeta JS de nuestro proyecto
+
+- Account.js
+- Car.js
+- Payment.js
+- Route.js
+- index.js
+
+- El archivo index.js será el lugar equivalente al punto de entrada de la aplicación donde estaremos declarando nuestros objetos basado en las clases. Para esta clase lo dejaremos en blanco.
+
+- Ahora veamos el código archivo por archivo:
+
+- Account.js
+
+function Account() {
+    this.id;
+    this.name;
+    this.docuemnt;
+    this.email;
+    this.password;
+}
+
+- Car.js
+
+function Car() {
+    this.id;
+    this.lincese;
+    this.driver;
+    this.passenger;
+}
+
+- Payment.js
+
+function Payment() {
+        this.id;
+    }
+
+- Route.js
+
+function Route {
+    this.id;
+    this.init;
+    this.end;
+}
+
+- Objetos
+
+<!-- 4 lenguajes > 4 maneras de declarar -->
+
+- Java
+
+Person person = new Person();
+
+<!-- new Person() crea una instancia de la clase -->
+
+- JavaScript
+
+var person = new Person();
+
+- Python
+
+persona = Person();
+
+- PHP
+
+$person = new Person();
+
+- Método constructor
+
+<!-- Java, JS, & PHP => new Person(); -->
+<!-- Python => Person() -->
+
+- Dar un estado inicial al objeto
+- Tiene el mismo nombre de la clase
+- Son los parámetros mínimos que necesita el objeto para pueda vivir
+
+[Clase 20](https://platzi.com/clases/1474-oop/16687-objetos-metodo-constructor-y-su-sintaxis-en-codigo/)
+
+- Métodos
+
+- java
+
+public Person(String name){
+    this.name = name;
+}
+
+- javascript
+
+function Person(name){
+    this.name = name;
+}
+
+- php
+
+public function __contruct($name){
+    $this->name = name;
+
+- python
+
+def __init (self, name):
+        self.name = name
+
+<!-- Las forma de llamar esos objetos y pasarle los datos -->
+
+- java
+
+Public person = new;
+    Person("Ann");
+
+- javascript
+
+var person = new
+    Person("Ann");
+
+- php
+
+$person = new Person("Ann");
+
+- python
+
+person = Person("Ann")
+
+<!-- Objetos dando vida a nuestras clases -->
+
+[Clase 21](https://platzi.com/clases/1474-oop/16686-dando-vida-a-nuestras-clases-en-java-y-python/)

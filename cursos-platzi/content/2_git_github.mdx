@@ -1,0 +1,180 @@
+---
+title: 'Git y Github Pro'
+description: 'Notas del Curso: Git y Github Pro'
+---
+
+## Curso: Git y Github Pro
+
+Profesor: John Freddy Vega
+
+## Clase 2 - ¿Por qué usar un sistema de control de versiones como Git?
+
+[Url](https://platzi.com/clases/1557-git-github/19934-por-que-usar-un-sistema-de-control-de-versiones--4/)
+
+Un sistema de control de versiones como Git nos ayuda a guardar el historial de cambios y crecimiento de los archivos de nuestro proyecto.
+
+En realidad, los cambios y diferencias entre las versiones de nuestros proyecto pueden tener similitudes, algunas veces los cambios pueden ser solo una palabra o una parte específica de un archivo específico. 
+
+Git está optimizado para guardar todos estos cambios de forma atómica e incremental, o sea, aplicando cambios sobre los últimos cambios, estos sobre los cambios anteriores y así hasta el inicio de nuestro proyecto.
+
+- El comando para iniciar nuestro repositorio, o sea, indicarle a Git que queremos usar su sistema de control de versiones en nuestro proyecto, es `git init`.
+- El comando para que nuestro repositorio sepa de la existencia de un archivo o sus últimos cambios es `git add .` Este comando no almacena las actualizaciones de forma definitiva, solo las guarda en algo que conocemos como `“Staging Area”` (no te preocupes, lo entenderemos más adelante).
+- El comando para almacenar definitivamente todos los cambios que por ahora viven en el staging area es git commit. También podemos guardar un mensaje para recordar muy bien qué cambios hicimos en este commit con el argumento `-m` "Mensaje del commit".
+- Por último, si queremos mandar nuestros commits a un servidor remoto, un lugar donde todos podamos conectar nuestros proyectos, usamos el comando `git push`.
+
+
+### Comandos de ejemplo del curso
+
+```bash
+git init
+git add biografia.txt
+git commit -m "version 1"
+
+git add .
+git commit -m "Cambios a v1"
+git status
+git show // Historia de commits
+git log biografia.txt
+```
+
+- `git show`
+
+```bash
+carlosvillalobosa @ MacBook git-github-pro  git show
+commit 2338aec16d451caa93f972566c0c993be9e0f0a1 (HEAD -> master)
+Author: charlievillacr <charlievilla@gmail.com>
+Date:   Mon Nov 4 12:00:10 2019 -0600
+
+    Inicio del repo del curso y los archivos gitignote readme y presetacion del curso
+commit 2338aec16d451caa93f972566c0c993be9e0f0a1 (HEAD -> master)
+Author: charlievillacr <charlievilla@gmail.com>
+Date:   Mon Nov 4 12:00:10 2019 -0600
+
+    Inicio del repo del curso y los archivos gitignote readme y presetacion del curso
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..496ee2c
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++.DS_Store
+\ No newline at end of file
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..bb2af59
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,20 @@
++# Nota del Curso: Git y Github Pro
+:...skipping...
+commit 2338aec16d451caa93f972566c0c993be9e0f0a1 (HEAD -> master)
+commit 2338aec16d451caa93f972566c0c993be9e0f0a1 (HEAD -> master)
+Author: charlievillacr <charlievilla@gmail.com>
+Date:   Mon Nov 4 12:00:10 2019 -0600
+
+    Inicio del repo del curso y los archivos gitignote readme y presetacion del curso
+
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+index 0000000..496ee2c
+--- /dev/null
++++ b/.gitignore
+@@ -0,0 +1 @@
++.DS_Store
+\ No newline at end of file
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..bb2af59
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,20 @@
++# Nota del Curso: Git y Github Pro
++
++Profesor: John Freddy Vega
+:
+```
+- `git log`
+
+```
+carlosvillalobosa @ MacBook git-github-pro  git log README.md
+commit 2338aec16d451caa93f972566c0c993be9e0f0a1 (HEAD -> master)
+Author: charlievillacr <charlievilla@gmail.com>
+Date:   Mon Nov 4 12:00:10 2019 -0600
+
+    Inicio del repo del curso y los archivos gitignote readme y presetacion del curso
+carlosvillalobosa @ MacBook git-github-pro  
+```
+
+## Instalando Git en OSX
+
+La instalación de GIT en Mac es un poco más sencilla. No debemos instalar GitBash porque Mac ya trae por defecto una consola de comandos (la puedes encontrar como “Terminal”). Tampoco debemos configurar OpenSSL porque viene listo por defecto.
+
+OSX está basado en un Kernel de UNIX llamado BSD. Estos significa que hay algunas diferencias entre las consolas de Mac y Linux. Pero no vas a notar la diferencia a menos que trabajes con acceso profundo a las interfaces de red o los archivos del sistema operativo. Ambas consolas funcionan muy parecido y comparten los comandos que vamos a ver durante el curso.
+
+[Puedes descargar Git aquí:](https://git-scm.com)
+
+Puedes verificar que Git fue instalado correctamente con el comando `git --version`.
+
+```
+carlosvillalobosa @ MacBook git-github-pro  git --version
+git version 2.20.1 (Apple Git-117)
+```
+
+### Common Git commands used in various situations:
+
+#### Start a working area (see also: git help tutorial)
+   `clone`      Clone a repository into a new directory
+   `init `      Create an empty Git repository or reinitialize an existing one
+
+#### Work on the current change (see also: git help everyday)
+   `add`        Add file contents to the index
+   `mv `        Move or rename a file, a directory, or a symlink
+   `reset`     Reset current HEAD to the specified state
+   `rm`         Remove files from the working tree and from the index
+
+#### Examine the history and state (see also: git help revisions)
+   `bisect`     Use binary search to find the commit that introduced a bug
+   `grep`      Print lines matching a pattern
+   `log`        Show commit logs
+   `show`       Show various types of objects
+   `status`     Show the working tree status
+
+#### grow, mark and tweak your common history
+   `branch`     List, create, or delete branches
+   `checkout`    Switch branches or restore working tree files
+   `commit`     Record changes to the repository
+   `diff`       Show changes between commits, commit and working tree, etc
+   `merge`      Join two or more development histories together
+   `rebase`     Reapply commits on top of another base tip
+   `tag`        Create, list, delete or verify a tag object signed with GPG
+
+#### collaborate (see also: git help workflows)
+   `fetch`      Download objects and refs from another repository
+   `pull`       Fetch from and integrate with another repository or a local branch
+   `push`       Update remote refs along with associated objects
+
+`git help -a` and `git help -g` list available subcommands and some
+concept guides. See `git help <command>` or `git help <concept>`
+to read about a specific subcommand or concept.
+
+## Editores de código, archivos binarios y de texto plano
+
+Editores de código, archivos binarios y de texto plano
+
+Un editor de código es una herramienta que nos brinda muchas ayudas para escribir código, algo así como un bloc de notas muy avanzado. Los editores más populares son VSCode, Sublime Text y Atom, pero no necesariamente debes usar alguno de estos para continuar con el curso.
+
+Tipos de archivos y sus diferencias:
+
+- Archivos de Texto (.txt): Texto plano normal y sin nada especial. Lo vemos igual sin importar dónde lo abramos, ya sea con el bloc de notas o con editores de texto avanzados.
+- Archivos RTF (.rtf): Podemos guardar texto con diferentes tamaños, estilos y colores. Pero si lo abrimos desde un editor de código, vamos a ver que es mucho más complejo que solo el texto plano. Esto es porque debe guardar todos los estilos del texto y, para esto, usa un código especial un poco difícil de entender y muy diferente a los textos con estilos especiales al que estamos acostumbrados.
+- Archivos de Word (.docx): Podemos guardar imágenes y texto con diferentes tamaños, estilos o colores. Al abrirlo desde un editor de código podemos ver que es código binario, muy difícil de entender y muy diferente al texto al que estamos acostumbrados. Esto es porque Word está optimizado para entender este código especial y representarlo gráficamente.
+
+Recuerda que debes habilitar la opción de ver la extensión de los archivos, de lo contrario, solo podrás ver su nombre. La forma de hacerlo en Windows es Vista > Mostrar u ocultar > Extensiones de nombre de archivo.
+
+## Clase 8 - Staging, repos y workflow
+
+[url](https://platzi.com/clases/1557-git-github/19946-que-es-staging-repositorios-y-cual-es-el-ciclo-bas/)
+
+Para iniciar un repositorio, o sea, activar el sistema de control de versiones de Git en tu proyecto, solo debes ejecutar el comando `git init`.
+

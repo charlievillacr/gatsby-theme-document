@@ -9,7 +9,8 @@
   },
   "workspaces": [
     "gatsby-theme-document",
-    "example"
+    "example",
+    "cursos-platzi"
   ],
   "devDependencies": {
     "eslint": "^6.2.2",

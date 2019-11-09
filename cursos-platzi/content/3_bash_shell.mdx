@@ -1,0 +1,320 @@
+---
+title: 'Bash Shell Scripting'
+description: 'Curso de Programación en Bash Shell'
+---
+
+## Curso de Progrmación en Bash Shell
+
+## Bash scripting
+
+[Clase 1](https://platzi.com/clases/1468-bash-shell/16548-basch-scripting/)
+
+La idea básica de generar programas en bash es poder ejecutar múltiplaes comandos de forma secuencial en muchas ocasiones para automatizar una tarea en especifico. Estos comandos son colocados en un archivo de textos de manera secuencial para poder ejecutaarlos a posteridad.
+
+Un archivo `.vimrc` podremos configurar de mejor maner nuestro editor VIM.
+
+Presionamos I para poder escribir en nuestro editor.
+
+Presionamos `ESC` para salir del modo edición, luego escribimos `:wq` para salir y guardar nuestro archivo.
+
+`vm prueba.txt` para crear un file `prueba.txt` y abrir el edito vm.
+
+En este curso vamos a utilizar la versión mejorada `vim`.
+
+`nano prueba.txt` otro editor de documentos de texto.
+
+Cuando estemos trabajando en un server no vamos a tener interfaz gráfica.
+
+`cd $home` go home
+
+`vim .vimrc` crear archivo `.vimrc` en el home.
+
+Con la siguiente config:
+
+```bash
+set showmode
+set autoident
+set tabstop=4
+set expandtab
+syntax on
+
+```
+
+## Clase 2 - Crear nuestro primer Script
+
+[URL](https://platzi.com/clases/1468-bash-shell/16547-crear-nuestro-primer-script/)
+
+Crear un archivo `.sh` con el nombre `1_utilityPostgres`:
+
+```bash
+vim 1_utilityPostgres.sh
+```
+
+### Agregar el contenido
+
+```bash
+# !/bin/bash
+# Programa para realizar algunas operaciones utilitarias de Postgres
+
+echo "Hola bienvenido al curso de Programación bash"
+```
+
+```bash
+Carloss-MacBook-Pro:shellCourse carlosvillalobosa$ vim 1_utilityPostgres.sh
+Carloss-MacBook-Pro:shellCourse carlosvillalobosa$ ls -l 1_utilityPostgres.sh
+-rw-r--r--  1 carlosvillalobosa  staff  138 Oct 29 15:05 1_utilityPostgres.sh
+Carloss-MacBook-Pro:shellCourse carlosvillalobosa$
+```
+
+`clear` para limpiar la terminal
+
+`cat` + `tab` // carga el nombre del último file
+
+### Imprime en la terminal
+
+```bash
+Carloss-MacBook-Pro:shellCourse carlosvillalobosa$ cat 1_utilityPostgres.sh 
+# !/bin/bash
+# Programa para realizar algunas operaciones utilitarios de Postgres
+
+echo "Hola bienvenido al curso de Programación bash"
+```
+
+## Clase 3 - Ejecutar nuestro script con u nombre único
+
+[URL](https://platzi.com/clases/1468-bash-shell/16550-ejecutar-nuestro-script-con-un-nombre-unico/)
+
+`ls -l` para apuntar a nuestro script.
+
+### Permisos
+
+Se agrupan 3 tres grandes grupos:
+
+1. Pirmeros: Usuario
+2. Segundos: Grupo
+3. Terceros: Cualquier otro usuario
+
+```bash
+421 421 421
+```
+
+`r=4`
+`w=2`
+`e=1`
+
+`421` simboliza todos los grupos
+
+`4+2+1=7`   //significa que de daremos todos los permisos al primer grupo.
+
+`4+2=6`     //read & write
+
+`4`         //write only
+
+```bash
+chmod 764 1_utilityPostgres.sh
+carlosvillalobosa$ ls -l
+-rwxrw-r--  1 carlosvillalobosa  staff  138 Oct 29 15:05 1_utilityPostgres.sh
+```
+
+### Quitar permiso de ejecución
+
+```bash
+chmod 664 1_utilityPostgres.sh
+ls -l
+total 8
+-rw-rw-r--  1 carlosvillalobosa  staff  138 Oct 29 15:05 1_utilityPostgres.sh
+```
+
+### Otro método para dar permisos
+
+`chmod +x 1_utilityPostgres.sh`
+
+### Ejecutar comando Bash
+
+`bash 1_utilityPostgres.sh`
+
+`./1_utilityPostgres.sh`
+
+Consola:
+
+`Hola bienvenido al curso de Programación bash`
+
+`type -a ls` para ver los aliases
+
+`type 1_utilityPostgres.sh` resultado:
+-bash: type: 1_utilityPostgres.sh: not found
+
+`type -t cd`
+
+`tpe -a cd`
+
+`type -t cd`
+
+## Declaración de Variables y Alcance en Bash Shell
+
+`sudo -i` gives you a complete root environment.
+
+`su -i`
+
+`sudo vim /etc/profile`
+
+```bash
+
+Al final del doc
+
+#Variable de Entorno S.O
+COURSE_NAME=Programacion Bash
+export COURSE_NAME
+```
+
+`wq`
+`:wq!` to override
+
+### Creamos un nuevo script en el folder /shellCourse
+
+`vim 2_variables.sh`
+
+```bash
+# !/bin/bash
+# Programa para revisar la declaración de variables
+
+opcion=0
+nombre=Charlie
+
+echo "Opción: $opcion y Nombre: $nombre"
+
+# Exportar la variables nombre para que este dispoible a los demás procesos
+export nombre
+
+# Llamar al siguiente script para recuperar la variable
+./2_variables_2.sh
+
+```
+
+`vim 2_variables_.sh`
+
+```bash
+# !/bin/bash
+# Programa para revisar la declaración de variables
+
+echo "Opción nombre pasada del script anterior: $nombre"
+
+```
+
+[URL de la clase 6](https://platzi.com/clases/1468-bash-shell/16549-declaracion-de-variables-y-alcance-en-bash-shell/)
+
+### Quedé en minuto 6:03 de la número 6
+
+Salir de Bash -i session:
+
+```bash
+Bash-3.2$ exit
+exit
+user$
+```
+
+## Tipos de Operadores
+
+### Creamos el script 3_tipoOperadores.sh
+
+```bash
+
+# ! /bin/bash
+# Programa para revisar los tipo de operadores
+# Autor: Carlos Villalobos
+
+
+numA=10
+numB=4
+
+echo "Operadores Aritméticos"
+echo "Números: A=$numA y B=$numB"
+echo "Sumar A + B =" $((numA + numB))
+echo "Restar A - B =" $((numA - numB))
+echo "Multiplicar A * B =" $((numA * numB))
+echo "Dividir A / B =" $((numA % numB))
+
+echo -e "\nOperadores Relacionales"
+echo "Números: A=$numA y B=$numB"
+echo "A > B =" $((numA > numB))
+echo "A < B =" $((numA < numB))
+echo "A >= B =" $((numA >= numB))
+echo "A <= B =" $((numA <= numB))
+echo "A == B =" $((numA == numB))
+echo "A != B =" $((numA != numB))
+
+echo -e "\nOperadores Asignación"
+echo "Números: A=$numA y B=$numB"
+echo "Sumar A += B" $((numA += numB))
+echo "Restar A -= B" $((numA -= numB))
+echo "Multiplicación A *= B" $((numA *= numB))
+echo "Dividir A /= B" $((numA /= numB))
+echo "Residuo A %= B" $((numA %= numB))
+```
+
+## Scripts con Argumentos
+
+[URL Clase 7](https://platzi.com/clases/1468-bash-shell/16551-script-con-argumentos/)
+
+Hay algunos identificadores para cuando ejecutamos un script con argumentos
+
+`$0`
+
+$0: Se refiere al nombre del Script
+
+`${10}`
+$1 al ${10}: Se refiere al número de argumento. Si es más de uno lo colocamos dentro de llaves.
+
+`$#`
+$#: Es útil para conocer el número de argumentos enviados.
+
+`$*`
+$*: Con este podemos conocer todos los argumentos enviados.
+
+Ejemplo:
+
+`vim 4_argumentos.sh`
+
+### Contenido del script
+
+```bash
+
+# /bin/bash
+# Programa para ejemplificar el paso de argumentos
+
+nombreCurso=$1
+horarioCurso=$2
+
+echo "El nombre del curso es: $nombreCurso dictado en el $horarioCurso"
+echo "El número de parámetros enviados es: $#"
+echo "Los parámetros enviados son: $*"
+
+```
+
+Para salir del modo de edición `esc`
+`shift` + `:wq`
+
+### Cambiar permisos para poder ejecutar el .sh
+
+```bash
+carlosvillalobosa @ MacBook shellCourse  ./4_argumentos.sh "Pogramación Bash" "07:00 a 09:00"
+Bash: ./4_argumentos.sh: Permission denied
+carlosvillalobosa @ MacBook shellCourse  chmod 664
+.DS_Store             2_variables.sh        3_tipoOperadores.sh
+1_utilityPostgres.sh  2_variables_2.sh      4_argumentos.sh
+carlosvillalobosa @ MacBook shellCourse  chmod 664 4_argumentos.sh
+carlosvillalobosa @ MacBook shellCourse  ./4_argumentos.sh "Pogramación Bash" "07:00 a 09:00"
+Bash: ./4_argumentos.sh: Permission denied
+carlosvillalobosa @ MacBook shellCourse  chmod 764 4_argumentos.sh 
+carlosvillalobosa @ MacBook shellCourse  ./4_argumentos.sh "Pogramación Bash" "07:00 a 09:00"
+El nombre del curso es: Pogramación Bash dictado en el 07:00 a 09:00
+El número de parámetros enviados es: 2
+Los parámetros enviados son: Pogramación Bash 07:00 a 09:00
+carlosvillalobosa @ MacBook shellCourse  
+carlosvillalobosa @ MacBook shellCourse  ./4_argumentos.sh "Pogramación Bash" "07:00 a 09:00"
+El nombre del curso es: Pogramación Bash dictado en el horario de: 07:00 a 09:00
+El número de parámetros enviados es: 2
+Los parámetros enviados son: Pogramación Bash 07:00 a 09:00
+carlosvillalobosa @ MacBook shellCourse  
+
+```
