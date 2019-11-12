@@ -59,6 +59,8 @@ description: 'Description'
 
 - Los componentes Stateful son los más robustos de React. Los usamos creando clases que extiendan de React.Component. Nos permiten manejar estado y ciclo de vida (más adelante los estudiaremos a profundidad).
 
+```js
+
 import React, { Component } from 'react';
 
 class Stateful extends Component {
@@ -77,10 +79,14 @@ class Stateful extends Component {
 
 export default Stateful;
 
+```
+
+
 ## Componentes Stateless
 
 - También tenemos componentes Stateless o Presentacionales. Los usamos creando funciones que devuelvan código en formato JSX (del cual hablaremos en la próxima clase).
 
+```js
 import React from 'react';
 
 const Stateless = () => {
@@ -93,11 +99,13 @@ const Stateless = () => {
 const Stateless = () => <h1>¡Hola!</h1>;
 
 export default Stateless;
+```
 
 ## Componente creado con JSX - HolaMundo.jsx
 
-[Clae 4](https://platzi.com/clases/1651-react-ejs/21929-jsx-javascript-html/)
+[Clase 4](https://platzi.com/clases/1651-react-ejs/21929-jsx-javascript-html/)
 
+```js
 import React from 'react';
 
 const HolaMundo = () => {
@@ -115,11 +123,13 @@ const HolaMundo = () => {
 };
 
 export default HolaMundo;
+```
 
 ## Clase 5  - Props: Comunicación entre Componentes
 
 - Button.jsx
 
+```js
 import React from 'react';
 
 const Button = props => {
@@ -134,6 +144,9 @@ const Button = props => {
 };
 
 export default Button;
+
+```
+
 
 ## Clase 6 - Los métodos del cliclo de vida
 
@@ -164,53 +177,53 @@ Ahora que entendemos las fases que cumple el ciclo de vida en React vamos a entr
 
 ### Montado
 
-- Constructor()
+- `Constructor()`
 
 Este es el primer método al que se hace un llamado, aquí es donde se inicializan los métodos controladores, eventos del estado.
 
-- getDerivedStateFromProps()
+- `getDerivedStateFromProps()`
 
 Este método se llama antes de presentarse en el DOM y nos permite actualizar el estado interno en respuesta a un cambio en las propiedades, es considerado un método de cuidado, ya que su implementación puede causar errores sutiles.
 
-- render()
+- `render()`
 
 Si queremos representar elementos en el DOM en este método es donde se escribe esta lógica, usualmente utilizamos JSX para trabajar y presentar nuestra aplicación.
 
-- ComponentDidMount()
+- `ComponentDidMount()`
 
 Este método se llama inmediatamente que ha sido montado en el DOM, aquí es donde trabajamos con eventos que permitan interactuar con nuestro componente.
 
 ### Actualización
 
-- getDerivedStateFromProps()
+- `getDerivedStateFromProps()`
 
 Este método es el primero en ejecutarse en la fase de actualización y funciona de la misma forma que en el montaje.
 
-- shouldComponentUpdate()
+- `shouldComponentUpdate()`
 
 Dentro de este método se puede controlar la fase de actualización, podemos devolver un valor entre verdadero o falso si queremos actualizar o no el componente y es utilizado principalmente para optimización.
 
-- render()
+- `render()`
 
 Se llama el método render que representa los cambios en el DOM.
 
-- componentDidUpdate()
+- `componentDidUpdate()`
 
 Este método es invocado inmediatamente después de que el componente se actualiza y recibe como argumentos las propiedades y el estado y es donde podemos manejar nuestro componente.
 
 ### Desmontado
 
-- componentWillUnmount()
+- `componentWillUnmount()`
 
 Este método se llama justo antes de que el componente sea destruido o eliminado del DOM.
 
 ### Manejo de  Errores
 
-- getDerivedStateFromError()
+- `getDerivedStateFromError()`
 
 Una vez que se lanza un error este es el primer método que se llama, el cual recibe el error como argumento y cualquier valor devuelto en este método es utilizado para actualizar el estado del componente.
 
-- componentDidCatch()
+- `componentDidCatch()`
 
 Este método es llamado después de lanzarse un error y pasa como argumento el error y la información representada sobre el error.
 
@@ -220,10 +233,11 @@ Ahora que entendemos cada una de las fases que tiene el ciclo de vida de react, 
 
 [Clase 7](https://platzi.com/clases/1651-react-ejs/23449-state-events/)
 
-"React nos permite responder a las interacciones de los usuarios con propiedades como onClick, onChange, onKeyPress, onFocus, onScroll, entre otras.
+"React nos permite responder a las interacciones de los usuarios con propiedades como onClick, `onChange`, `onKeyPress`, `onFocus`, `onScroll`, entre otras.
 
 Estas propiedades reciben el nombre de la función que ejecuta el código que responde a las interacciones de los usuarios. Seguramente, esta función usará la función this.setState para actualizar el estado de nuestro componente.
 
+```js
 class Button extends React.Component {
   state = { count: 0 }
 
@@ -242,22 +256,24 @@ class Button extends React.Component {
     );
   }
 }
+```
 
 Recuerda que los nombres de estos eventos deben seguir la nomenclatura camelCase: primera palabra en minúsculas, iniciales de las siguientes palabras en mayúsculas y el resto también en minúsculas."
 
 ## Clase 8 - Instalación y configuración de entorno
 
 Iniciar un repositorio en GIT:
-git init
+`git init`
 
 Iniciar un proyecto de Node.js:
 
-npm init -y
+`npm init -y`
 
 Instalar React:
 
-npm install --save react react-dom
+`npm install --save react react-dom`
 
+```js
 1. Crear rempo mkdir: platziVideo.
 2. git init
 3. Inicializar el proyecto: npm init -y (la bandera -y indica que va a preconfigurar el proyecto y luego va a crear automaticamente.)
@@ -271,10 +287,11 @@ npm install --save react react-dom
     sudo npm install react-dom
             "react":"^16.10.2",
         "react-dom": "^16.10.2"
+```
 
 ## Clase 9 - Instalar Babel
 
-- npm install @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+- `npm install @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev`
 
 ## Clase 10 - Webpack para nuestros módulos
 
@@ -282,22 +299,24 @@ npm install --save react react-dom
 
 - Entorno de trabajo
 
-- npm install webpack webpack-cli html-webpack-plugin html-loader --save-dev
+- `npm install webpack webpack-cli html-webpack-plugin html-loader --save-dev`
 
 ## Clase 11 - Webpack Dev Server: Reporte de errores y Cambios en tiempo real
 
 - Instalación de Webpack Dev Server: Reporte de errores y Cambios en tiempo real
 
-- npm install --save-dev webpack-server
+- `npm install --save-dev webpack-server`
 
 - Script para ejecutar el servidor de Webpack y visualizar los camjios en tiempo real (package.json)
 
+```js
 {
   "scripts: {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open --mode development"
   }
 }
+```
 
 ## Clase 12 - Estilos con SASS
 
@@ -305,10 +324,11 @@ npm install --save react react-dom
 
 - Instalación de Sass
 
-- npm install --save-dev mini-css-extract-plugin css-loader node-sass sass-loader --save-dev
+- `npm install --save-dev mini-css-extract-plugin css-loader node-sass sass-loader --save-dev`
 
 - Configuración de Sass en Webpack (webpack.config.js):
 
+```js
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // ...
@@ -333,6 +353,7 @@ plugins: [
     filename: 'assets/[name].css',
   }),
 ],`
+```
 
 ## EsLint
 
@@ -342,7 +363,7 @@ plugins: [
 
 - Instalación de ESLint:
 
-- npm install --save-dev eslint babel-eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y
+- `npm install --save-dev eslint babel-eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y`
 
 - Podemos configurar las reglas de ESLint en el archivo .eslintrc.
 

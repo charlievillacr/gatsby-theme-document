@@ -1,1 +1,26 @@
-# Gatsby Theme Document Example
+# Blog de Documentación
+
+## Cursos de Desarrollo
+
+1. [Introducción a la Terminal y Línea de Comandos](https://platzi.com/clases/terminal/)
+2. [Git y Github Pro](https://platzi.com/clases/git-github/)
+3. [Bash Shell Programming](https://platzi.com/clases/bash-shell/)
+4. [Curso Básico de Node.js](https://platzi.com/clases/basico-nodejs/)
+5. [Curso Pensamiento Lógico](https://platzi.com/clases/pensamiento-logico/)
+6. [Curso de Prework: Buenas Prácticas y Entorno de Desarrollo](https://platzi.com/clases/prework/)
+7. [Curso de Webpack](https://platzi.com/clases/webpack/)
+8. [Desarrollo Web Online Prof. Leonidas](https://platzi.com/clases/html5-css3/)
+9. [Responsive Design](https://platzi.com/clases/responsive-design/)
+10. [Curso de CSS Grid Layout](https://platzi.com/clases/css-grid-layout/)
+11. [Curso de HTML y CSS](https://platzi.com/clases/html-css/)
+12. [Animaciones para la Web](https://platzi.com/clases/animaciones-web/)
+13. [Curso de Frontend Developer](https://platzi.com/clases/frontend-developer/)
+14. [Curso preoprocesadores CSS](https://platzi.com/clases/preprocesadores/)
+15. [Curso de Sass](https://platzi.com/clases/sass/)
+16. [Curso de Foundation](https://platzi.com/clases/foundation/)
+17. [Curso Básico de MongoDB](https://platzi.com/clases/mongodb/)
+18. [Programación Orientada a Objetos: POO](https://platzi.com/clases/oop/)
+19. [Curso Práctico React.js - Prof. Oscar Barajas](https://platzi.com/clases/react-ejs/)
+20. [Curso de React.js - Prof. Richard Kaufman](https://platzi.com/clases/react/)
+21. [Curso Gatsby.js](https://platzi.com/clases/gatsby/)
+22. [Curso Profesional de JavaScript](https://platzi.com/clases/javascript-profesional/)
